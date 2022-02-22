@@ -1,0 +1,85 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.form__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+  }
+
+  @media (min-width: @desktop-width) {
+    gap: 19px;
+  }
+}
+
+.form__wrapper--popup {
+  @media (min-width: @tablet-width) {
+    flex-direction: column;
+  }
+}
+
+.form__input {
+  color: @basic-dark;
+  font-size: 14px;
+  line-height: 17px;
+  padding: 16px 15px 15px 0;
+  border: 1px solid @border-gray;
+  margin: 0;
+
+  &::-moz-placeholder {
+    color: @basic-dark;
+  }
+
+  &::placeholder {
+    color: @basic-dark;
+  }
+}
+
+.form__input--phone {
+  min-width: 220px;
+  padding-left: 51px;
+  position: relative;
+  background: @basic-white url("../../img/required.svg") no-repeat 14px 5px;
+
+  @media (min-width: @tablet-width) {
+    min-width: 201px;
+  }
+}
+
+.form__input--email {
+  min-width: 256px;
+  padding-left: 15px;
+
+  @media (min-width: @tablet-width) {
+    min-width: 237px;
+  }
+}
+
+.form__button {
+  border: none;
+  min-width: 288px;
+
+  @media (min-width: @tablet-width) {
+    min-width: 250px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 18px 39px;
+    min-width: 176px;
+  }
+}
+
+.form__button--popup {
+  @media (min-width: @tablet-width) {
+    min-width: 175px;
+  }
+}

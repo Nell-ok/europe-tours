@@ -1,0 +1,28 @@
+.link-phone {
+  font-weight: 400;
+  line-height: 32px;
+  color: @basic-orange;
+  text-decoration: underline;
+}
+
+.link-phone--header {
+  @media (min-width: @desktop-width) {
+    color: @basic-dark;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: @button-orange-focus;
+    }
+  }
+}
+
+.link-phone--offers {
+  @media (min-width: @desktop-width) {
+    text-decoration: none;
+    color: @black;
+  }
+}

@@ -1,0 +1,66 @@
+.page-header {
+  grid-row: ~"1 / 2";
+  grid-column: ~"1 / -1";
+
+  @media (min-width: @desktop-width) {
+    padding: 36px 378px 32px;
+  }
+}
+
+.page-header__wrapper {
+  padding: 0;
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.page-header__logo {
+  padding: 18px 16px 15px;
+  margin: 0;
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    padding: 16px 21px 17px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
+}
+
+.page-header__wrapper-nav {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    gap: 111px;
+  }
+}
+
+.page-header__link {
+  display: none;
+  position: relative;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: -40px;
+      width: 30px;
+      height: 30px;
+      background: url("../../img/phone-header.svg") no-repeat;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      &::before {
+        background: url("../../img/phone-offers.svg") no-repeat;
+      }
+    }
+  }
+}

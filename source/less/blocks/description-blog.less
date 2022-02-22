@@ -1,0 +1,31 @@
+.description-blog {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 118px;
+      left: 238px;
+      width: 1444px;
+      height: 1089px;
+      background: url("../../img/map.png") no-repeat center;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/map@2x.png");
+        background-size: 1444px, 100%;
+      }
+    }
+  }
+}
+
+.description-blog__wrapper {
+  @media (min-width: @desktop-width) {
+    padding: 0 375px;
+    z-index: 1;
+  }
+}

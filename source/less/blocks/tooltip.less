@@ -1,0 +1,39 @@
+.tooltip {
+  display: none;
+}
+
+.tooltip--show {
+  @media (min-width: @tablet-width) {
+    display: block;
+    text-align: center;
+    position: fixed;
+    top: 200px;
+    right: 0;
+    left: 0;
+    bottom: auto;
+    margin: auto;
+    background-color: @background-gray;
+    width: 720px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 728px;
+    z-index: 2;
+  }
+}
+
+.tooltip__wrapper {
+  position: relative;
+}
+
+.tooltip__text {
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 42px;
+    color: @dark-modal;
+    text-align: center;
+    padding: 179px 160px;
+  }
+}

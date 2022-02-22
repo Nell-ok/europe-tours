@@ -1,0 +1,112 @@
+.photo-blog {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 40px 16px;
+  text-align: center;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    padding: 80px 76px 95px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 200px 375px 128px;
+    text-align: start;
+    align-items: flex-start;
+  }
+}
+
+.photo-blog__title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 36px;
+  margin: 0;
+  padding-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 45px;
+    padding-bottom: 21px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 55px;
+    line-height: 80px;
+    padding-bottom: 30px;
+    letter-spacing: -1.25px;
+  }
+}
+
+.photo-blog__title-hidden {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: inline;
+  }
+}
+
+.photo-blog__text {
+  margin: 0;
+  padding-bottom: 20px;
+  color: @basic-gray;
+  letter-spacing: -0.47px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 33px;
+    padding-bottom: 52px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 4px;
+      width: 228px;
+      background-color: @basic-orange;
+    }
+  }
+}
+
+.photo-blog__list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 35px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    justify-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 60px;
+    row-gap: 100px;
+  }
+}
+
+.photo-blog__list .photo-blog__item {
+  &:last-of-type {
+    @media (min-width: @tablet-width) {
+      grid-column: ~"1 / -1";
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-left: 60px;
+    }
+  }
+}

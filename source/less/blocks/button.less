@@ -1,0 +1,27 @@
+.button {
+  color: @basic-white;
+  background-color: @basic-orange;
+  padding: 19px 40px;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: @button-orange-focus;
+  }
+
+  &:active {
+    background-color: fade(@button-orange-focus, 70%);
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 700;
+    padding: 30px 40px;
+  }
+}

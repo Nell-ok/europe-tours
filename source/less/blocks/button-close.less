@@ -1,0 +1,25 @@
+.button-close {
+  content: "";
+  position: absolute;
+  top: -80px;
+  right: 4px;
+  width: 22px;
+  height: 22px;
+  background: transparent url("../../img/close.svg") no-repeat;
+  border: none;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    top: -60px;
+    right: -40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -52px;
+  }
+}
+
+.button-close--tooltip {
+  top: 20px;
+  right: 20px;
+}

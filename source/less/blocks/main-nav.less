@@ -1,0 +1,134 @@
+.main-nav {
+  @media (min-width: @tablet-width) {
+    position: relative;
+  }
+}
+
+.main-nav__toggle {
+  padding: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  display: block;
+  width: 50px;
+  height: 51px;
+  background-color: @basic-orange;
+  cursor: pointer;
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    width: 72px;
+    top: -51px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-nav__toggle {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 17px;
+    right: 14px;
+    width: 22px;
+    height: 1px;
+    background-color: @basic-white;
+    box-shadow: 0 6px 0 0 @basic-white, 0 12px 0 0 @basic-white;
+  }
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      right: 25px;
+    }
+  }
+}
+
+.main-nav--opened .main-nav__toggle {
+  background-color: transparent;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: 14px;
+    width: 22px;
+    height: 22px;
+    background: transparent url("../../img/close.svg") no-repeat;
+  }
+}
+
+.main-nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 84px 0 284px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    flex-direction: row;
+    gap: 40px;
+  }
+}
+
+.main-nav__item {
+  padding: 18px 0 18px 16px;
+  background: @background-gray url("../../img/arrow-menu.svg") no-repeat center right 23px;
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    background: none;
+  }
+}
+
+.main-nav--opened .main-nav__list {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 448px;
+    max-height: 568px;
+    z-index: 10;
+    background-color: @basic-white;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 0;
+    position: static;
+  }
+}
+
+.main-nav__link {
+  color: @dark-modal;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+
+  @media (min-width: @desktop-width) {
+    color: @basic-dark;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: @button-orange-focus;
+    }
+  }
+}
+
+@media (max-width: @desktop-width-only) {
+  .main-nav--closed .main-nav__list {
+    display: none;
+  }
+}
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}

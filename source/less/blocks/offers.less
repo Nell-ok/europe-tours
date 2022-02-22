@@ -1,0 +1,125 @@
+.offers {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: center;
+  padding: 45px 16px 50px;
+
+  @media (min-width: @tablet-width) {
+    padding: 82px 21px 109px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 234px 375px 140px;
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    gap: 90px;
+    justify-items: start;
+    align-items: center;
+  }
+}
+
+.offers__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: center;
+
+  @media (min-width: @desktop-width) {
+    grid-row: ~"1 / -1";
+    grid-column: ~"2 / -1";
+    min-width: 310px;
+    z-index: 1;
+  }
+}
+
+.offers__title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 36px;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 55px;
+    line-height: 90px;
+    padding-bottom: 20px;
+    text-align: start;
+  }
+}
+
+.offers__text {
+  margin: 0;
+  color: fade(@basic-black, 70%);
+  padding: 20px 0 17px;
+  line-height: 170%;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 32px;
+    padding-top: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 30px 1px 60px 0;
+    text-align: start;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 2.92px;
+      width: 175px;
+      background-color: @basic-orange;
+    }
+  }
+}
+
+.offers__wrapper-contact {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 40px;
+
+  @media (min-width: @desktop-width) {
+    gap: 13px;
+    margin-bottom: 0;
+  }
+}
+
+.offers__title-contact {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 34px;
+  color: @basic-dark;
+  margin: 0;
+
+  @media (min-width: @desktop-width) {
+    font-size: 22px;
+  }
+}
+
+.offers__link {
+  font-size: 18px;
+
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 30px;
+      height: 30px;
+      background: url("../../img/phone-offers.svg") no-repeat;
+    }
+  }
+}
