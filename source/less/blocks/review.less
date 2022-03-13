@@ -1,35 +1,90 @@
-.review {
-  background: url("../img/background-review.jpg") no-repeat center bottom 65px;
-  object-fit: cover;
-  padding-top: 50px;
-  background-size: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
+.review--greece {
+  background: url("../img/background-review.jpg");
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/background-review@2x.jpg");
-    background-size: 320px, 100%;
   }
 
   @media (min-width: @tablet-width) {
-    padding-top: 80px;
-    background: url("../img/background-review-tablet.jpg") no-repeat center bottom 32px;
-    background-size: 100%;
+    background: url("../img/background-review-tablet.jpg");
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/background-review-tablet@2x.jpg");
-      background-size: 768px, 100%;
     }
   }
 
   @media (min-width: @desktop-width) {
-    background: url("../img/background-review-desktop.jpg") no-repeat;
-    padding-top: 114px;
+    background: url("../img/background-review-desktop.jpg");
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/background-review-desktop@2x.jpg");
+    }
+  }
+}
+
+.review--albania {
+  background: url("../img/background-review-albania.png");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/background-review-albania@2x.png");
+  }
+}
+
+.review--macedonia {
+  background: url("../img/background-review-macedonia.png");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/background-review-macedonia@2x.png");
+  }
+}
+
+.review--montenegro {
+  background: url("../img/background-review-montenegro.png");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/background-review-montenegro@2x.png");
+  }
+}
+
+.review--croatia {
+  background: url("../img/background-review-croatia.png");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/background-review-croatia@2x.png");
+  }
+}
+
+.review {
+  object-fit: cover;
+  padding-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  background-position: center bottom 65px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  @media (min-resolution: 2dppx) {
+    background-size: 100%;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 80px;
+    background-position: center bottom 32px;
+    background-size: 100%;
+
+    @media (min-resolution: 2dppx) {
+      background-size: 100%;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 114px;
+    background-position: 0% 0%;
+    background-size: auto;
+
+    @media (min-resolution: 2dppx) {
       background-size: 430px, 100%;
     }
   }
